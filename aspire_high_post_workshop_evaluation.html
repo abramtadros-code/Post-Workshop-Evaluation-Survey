@@ -9,18 +9,19 @@
 header{background:linear-gradient(115deg,var(--navy),var(--blue));color:white;padding:28px 18px}
 .head,main{max-width:1000px;margin:auto}.head{display:flex;align-items:center;gap:16px}
 .mark{width:56px;height:56px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:27px}
-.brand h1{font: bold 29px Georgia,serif;letter-spacing:2px;color:#f5d98f;margin:0}.brand h2{font:16px Georgia,serif;letter-spacing:1.5px;margin:4px 0}.brand p{font-size:12px;letter-spacing:.6px;margin:6px 0;color:#e7edf5}
+.brand h1{font:bold 29px Georgia,serif;letter-spacing:2px;color:#f5d98f;margin:0}.brand h2{font:16px Georgia,serif;letter-spacing:1.5px;margin:4px 0;color:#fff}.brand p{font-size:12px;letter-spacing:.6px;margin:6px 0;color:#e7edf5}
 main{padding:25px 14px 45px}.intro,.section,.notice{background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px;margin-bottom:17px;box-shadow:0 3px 12px #15263b0a}
 .intro{border-top:5px solid var(--gold)}.tag{display:inline-block;background:#f8f1df;color:#795b19;padding:5px 11px;border-radius:20px;font-size:12px;font-weight:bold}
-h2{color:var(--navy);font: bold 25px Georgia,serif;margin:12px 0 5px}.kicker{font:italic 17px Georgia,serif;color:#967326}
-.section h3{font: bold 19px Georgia,serif;color:var(--navy);margin:0 0 4px}.sub,.hint{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{min-width:0}.full{grid-column:1/-1}
-label,.legend{display:block;font-weight:650;margin:0 0 6px;color:#28374c}
-input[type=text],input[type=date],select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd3df;border-radius:8px;background:#fff;color:#1f2d40;font:inherit}
-textarea{min-height:88px;resize:vertical}input:focus,select:focus,textarea:focus{outline:3px solid #e9dfc5;border-color:var(--gold)}
-.question{padding:13px 0;border-top:1px solid #edf0f4}.question p{font-weight:600;margin:0 0 10px}
-.scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:10px 0 16px}.scale label{border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center;font-size:12px;font-weight:400}.scale input{display:block;margin:0 auto 5px;accent-color:var(--navy)}
-.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px}.choices label{display:flex;gap:8px;font-weight:400}.choices input{margin-top:5px;accent-color:var(--navy)}
-.notice{border-left:5px solid var(--gold);background:#fffdf8;font-size:14px}.submit{background:var(--navy);color:white;border:0;border-radius:9px;padding:14px 25px;font-size:16px;font-weight:bold;cursor:pointer}.status{font-weight:600;color:var(--navy)}
+.intro h2{color:var(--navy);font:bold 25px Georgia,serif;margin:12px 0 5px}.kicker{font:italic 17px Georgia,serif;color:#967326}
+.section h3{font:bold 19px Georgia,serif;color:var(--navy);margin:0 0 4px}.sub,.hint{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.full{grid-column:1/-1}
+label{display:block;font-weight:650;margin:0 0 6px;color:#28374c}
+select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd3df;border-radius:8px;background:#fff;color:#1f2d40;font:inherit}
+textarea{min-height:88px;resize:vertical}select:focus,textarea:focus{outline:3px solid #e9dfc5;border-color:var(--gold)}
+.question{padding:13px 0;border-top:1px solid #edf0f4}.question>p{font-weight:600;margin:0 0 10px}
+.scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:10px 0 6px}.scale label{border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center;font-size:12px;font-weight:400;margin:0;cursor:pointer}.scale input{display:block;margin:0 auto 5px;accent-color:var(--navy)}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px}.choices label{display:flex;gap:8px;font-weight:400;margin:0}.choices input{margin-top:5px;accent-color:var(--navy)}
+.notice{border-left:5px solid var(--gold);background:#fffdf8;font-size:14px}.submit{background:var(--navy);color:white;border:0;border-radius:9px;padding:14px 25px;font-size:16px;font-weight:bold;cursor:pointer}.submit:disabled{opacity:.6;cursor:wait}.status{font-weight:600;color:var(--navy)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 footer{text-align:center;color:#667286;font-size:13px;padding:20px}
 @media(max-width:650px){.grid,.choices{grid-template-columns:1fr}.intro,.section{padding:17px}.scale{grid-template-columns:1fr}.brand h1{font-size:24px}}
 </style></head>
@@ -28,55 +29,60 @@ footer{text-align:center;color:#667286;font-size:13px;padding:20px}
 <header><div class="head"><div class="mark">✦</div><div class="brand"><h1>ASPIRE HIGH</h1><h2>YOUTH DEVELOPMENT INC.</h2><p>STUDENT DEVELOPMENT · EDUCATIONAL EMPOWERMENT · LEADERSHIP</p></div></div></header>
 <main>
 <div class="intro"><span class="tag">STUDENT WORKSHOP FEEDBACK</span><h2>Post-Workshop Evaluation Survey</h2><p class="kicker">Your Voice. Your Growth. Your Future.</p>
-<p>Your feedback is important to us. This evaluation helps Aspire High assess workshop quality, understand your learning experience, recognize personal growth, and continually improve our programs.</p>
-<p>Please complete this survey immediately following each workshop. Your honest feedback helps us create meaningful, engaging, and impactful learning experiences.</p><p class="hint">Estimated completion time: 5–7 minutes. Student name is optional. Please do not include sensitive personal information.</p></div>
+<p>Your feedback helps Aspire High assess workshop quality, understand your learning experience, and continually improve our programs. Please complete this survey right after each workshop.</p><p class="hint">Estimated completion time: 3–5 minutes. This survey is anonymous. Please do not include sensitive personal information.</p></div>
 <form id="surveyForm">
-<section class="section"><h3>Student &amp; Workshop Information</h3><p class="sub">Tell us which workshop you attended.</p><div class="grid">
-<div><label>1. Workshop Title *</label><input name="workshop_title" required></div>
-<div><label>2. Workshop Date *</label><input type="date" name="workshop_date" required></div>
-<div><label>3. Student Name (Optional)</label><input name="student_name"><p class="hint">Leave blank if you prefer anonymous feedback.</p></div>
-<div><label>4. Program or Student Cohort *</label><select name="cohort" required><option value="">Select an option</option><option>Aspire High Youth Development Program</option><option>Leadership Development</option><option>College &amp; Career Readiness</option><option>Professional Development</option><option>Other</option></select></div>
+<section class="section"><h3>About You &amp; the Workshop</h3><p class="sub">Tell us which workshop you attended.</p><div class="grid">
+<div><label for="program">Which program or workshop are you responding about? *</label><select id="program" name="program" required><option value="">Select an option</option><option>After-School Workshop</option><option>Life Skills Workshop</option><option>Senior Bootcamp</option></select></div>
+<div><label for="title">Which workshop title did you attend? *</label><select id="title" name="title" required><option value="">Select an option</option></select></div>
+<div><label for="grade">What grade are you in? *</label><select id="grade" name="grade" required><option value="">Select an option</option><option>6-8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>College</option></select></div>
+<div><label for="district">What school do you attend? *</label><select id="district" name="district" required><option value="">Select an option</option><option>Franklin High School</option><option>Franklin Middle School</option></select></div>
 </div></section>
-<section class="section"><h3>Section 1. Workshop Experience &amp; Engagement</h3><p class="sub">Questions 5–10 use this scale: 1 Strongly Disagree · 2 Disagree · 3 Neither · 4 Agree · 5 Strongly Agree.</p><div id="q5"></div></section>
-<section class="section"><h3>Section 2. Personal Growth, Confidence &amp; Development</h3><p class="sub">Questions 11–17 use the same 1–5 agreement scale.</p><div id="q11"></div></section>
-<section class="section"><h3>Section 3. Overall Workshop Satisfaction</h3>
-<div class="question"><p>18. Overall, how satisfied were you with this workshop? *</p><div class="choices"><label><input type="radio" name="satisfaction" value="1" required>1 – Very Dissatisfied</label><label><input type="radio" name="satisfaction" value="2">2 – Dissatisfied</label><label><input type="radio" name="satisfaction" value="3">3 – Neither Satisfied nor Dissatisfied</label><label><input type="radio" name="satisfaction" value="4">4 – Satisfied</label><label><input type="radio" name="satisfaction" value="5">5 – Very Satisfied</label></div></div>
-<div class="question"><p>19. Would you participate in another Aspire High workshop or development opportunity? *</p><div class="choices"><label><input type="radio" name="return_intent" value="Definitely Yes" required>Definitely Yes</label><label><input type="radio" name="return_intent" value="Probably Yes">Probably Yes</label><label><input type="radio" name="return_intent" value="Not Sure">Not Sure</label><label><input type="radio" name="return_intent" value="Probably Not">Probably Not</label><label><input type="radio" name="return_intent" value="Definitely Not">Definitely Not</label></div></div>
-<div class="question"><p>20. How likely are you to recommend Aspire High workshops to another student? *</p><select name="recommendation_score" required><option value="">Choose 0–10</option><option value="0">0 – Not at all likely</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10 – Extremely likely</option></select></div></section>
-<section class="section"><h3>Section 4. Student Voice, Reflection &amp; Feedback</h3><p class="sub">Your thoughts and recommendations help us make a difference.</p><div class="grid">
-<div class="field full"><label>21. What was the most valuable or impactful part of today's workshop?</label><textarea name="most_valuable"></textarea><p class="hint">Consider an activity, discussion, lesson, resource, personal realization, or experience.</p></div>
-<div class="field full"><label>22. What is one new thing you learned or discovered about yourself during this workshop?</label><textarea name="self_discovery"></textarea></div>
-<div class="field full"><label>23. What is one skill, strategy, or lesson from today's workshop that you plan to apply in your life?</label><textarea name="application_plan"></textarea></div>
-<div class="field full"><label>24. What could Aspire High improve to make future workshops more engaging, informative, and meaningful?</label><textarea name="improvements"></textarea></div>
-<div class="field full"><label>25. What additional topics or experiences would you like Aspire High to offer in future workshops?</label><textarea name="future_topics"></textarea></div>
-<div class="field full"><label>26. Is there anything else you would like to share with the Aspire High team?</label><textarea name="additional_feedback"></textarea></div>
+<section class="section"><h3>Your Experience</h3><p class="sub">Choose the answer that fits best: 1 Strongly Disagree · 2 Disagree · 3 Neither · 4 Agree · 5 Strongly Agree.</p><div id="likert"></div></section>
+<section class="section"><h3>Overall</h3>
+<div class="question"><p>Overall, I am satisfied with this workshop. *</p><div class="choices"><label><input type="radio" name="s11" value="1" required>1 – Very Dissatisfied</label><label><input type="radio" name="s11" value="2">2 – Dissatisfied</label><label><input type="radio" name="s11" value="3">3 – Neither</label><label><input type="radio" name="s11" value="4">4 – Satisfied</label><label><input type="radio" name="s11" value="5">5 – Very Satisfied</label></div></div>
+<div class="question"><p>Would you attend another Aspire High workshop? *</p><div class="choices"><label><input type="radio" name="s12" value="Yes" required>Yes</label><label><input type="radio" name="s12" value="Maybe">Maybe</label><label><input type="radio" name="s12" value="No">No</label></div></div>
+<div class="question"><p>How likely are you to recommend this workshop to a friend? *</p><select name="s13" aria-label="Likelihood to recommend" required><option value="">Choose 0–10</option><option value="0">0 – Not at all likely</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option value="10">10 – Extremely likely</option></select></div></section>
+<section class="section"><h3>Your Voice</h3><div class="grid">
+<div class="full"><label for="s14">What was the most helpful part of today's workshop?</label><textarea id="s14" name="s14"></textarea></div>
+<div class="full"><label for="s15">What should we change or add to make this workshop better?</label><textarea id="s15" name="s15"></textarea></div>
 </div></section>
-<section class="section"><h3>Section 5. Student Commitment &amp; Next Steps</h3><div class="grid">
-<div class="field full"><label>27. Following this workshop, what is one action you are committed to taking?</label><textarea name="committed_action"></textarea></div>
-<div><label>28. Would you like additional support, mentorship, resources, or guidance related to today's workshop? *</label><select name="support_requested" required><option value="">Select</option><option>Yes</option><option>No</option><option>Maybe</option></select></div>
-<div><label>29. If you answered Yes or Maybe, what type of support would be helpful?</label><textarea name="support_details"></textarea><p class="hint">Optional. Please do not include sensitive personal information.</p></div>
-</div></section>
-<div class="notice"><strong>Thank you for sharing your voice!</strong><p>Your feedback matters. Your ideas inspire improvement. Your growth is our priority.</p><p>At Aspire High Youth Development Inc., we believe every young person deserves the opportunity, resources, mentorship, and support to reach their fullest potential.</p><strong>Remember: Your future is worth investing in.</strong></div>
-<button class="submit" type="submit">Submit Evaluation</button> <span class="status" id="status" role="status"></span>
-<p class="hint">Empowering Potential. Inspiring Possibilities. Building Futures.</p></form>
+<div class="notice"><strong>Thank you for sharing your voice!</strong><p>Your feedback matters. Your ideas inspire improvement. Your growth is our priority.</p><strong>Remember: Your future is worth investing in.</strong></div>
+<button class="submit" id="btn" type="submit">Submit Evaluation</button> <span class="status" id="status" role="status"></span>
+</form>
 <footer>© Aspire High Youth Development Inc. · Empowering Potential · Inspiring Possibilities · Building Futures</footer></main>
 <script>
-const qs=[
-[5,"I felt welcomed, included, valued, and respected throughout the workshop."],
-[6,"The facilitator communicated information clearly and made the topics easy to understand."],
-[7,"The workshop content was relevant to my personal, academic, educational, or career development."],
-[8,"The activities and discussions encouraged me to actively participate and engage."],
-[9,"I learned new information, skills, or strategies that I can apply in my everyday life."],
-[10,"The workshop was well-organized, informative, and engaging."],
-[11,"I feel more confident in my abilities, strengths, and potential after participating in this workshop."],
-[12,"I have a better understanding of how to take actionable steps toward achieving my personal, academic, or career goals."],
-[13,"I feel more motivated and encouraged to pursue opportunities for personal and professional growth."],
-[14,"I gained knowledge or skills that will help me make informed decisions about my future."],
-[15,"I know where to access resources, mentorship, guidance, or support when I need assistance."],
-[16,"I felt comfortable asking questions, expressing my opinions, and sharing my ideas."],
-[17,"I can identify at least one positive action or change I want to make as a result of this workshop."]
+// 1) Paste the Power Automate "HTTP POST URL" here (see setup steps).
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbztobLg91aW27viil9G-XzD_udTn4M0LajFJoG0f0amnJkdPN0zHqnAS3Cta5kj3s3qsQ/exec";
+// 2) Paste every title from your Workshop Titles tab, one per line.
+const TITLES = [
+  "Discovering Your Strengths & Values"
+  // "Workshop 2 ...",
 ];
-function render(target,items){document.getElementById(target).innerHTML=items.map(([n,q])=>`<div class="question"><p>${n}. ${q} *</p><div class="scale">${[1,2,3,4,5].map((v)=>`<label><input type="radio" name="q${n}" value="${v}" required>${v}<br>${["Strongly Disagree","Disagree","Neither Agree nor Disagree","Agree","Strongly Agree"][v-1]}</label>`).join("")}</div></div>`).join("")}
-render("q5",qs.slice(0,6));render("q11",qs.slice(6));
-document.getElementById("surveyForm").addEventListener("submit",e=>{e.preventDefault();document.getElementById("status").textContent="The design is ready, but response collection is not connected. Connect this page to your Google Form or a secure response endpoint before publishing.";});
+const LIKERT = [
+ ["s3","I felt welcome and respected in this workshop."],
+ ["s4","The facilitator explained things in a way I could understand."],
+ ["s5","The topics covered were useful for my life and goals."],
+ ["s6","I learned something new in this workshop."],
+ ["s7","I feel more confident in my skills after this workshop."],
+ ["s8","I feel more prepared for my next step (school, college, career, or life after high school)."],
+ ["s9","I know where to go for help and resources after this workshop."],
+ ["s10","I felt safe asking questions and participating."]
+];
+const LABELS=["Strongly Disagree","Disagree","Neither","Agree","Strongly Agree"];
+document.getElementById("likert").innerHTML=LIKERT.map(([k,q])=>`<div class="question"><p>${q} *</p><div class="scale">${[1,2,3,4,5].map(v=>`<label><input type="radio" name="${k}" value="${v}" required>${v}<br>${LABELS[v-1]}</label>`).join("")}</div></div>`).join("");
+document.getElementById("title").insertAdjacentHTML("beforeend",TITLES.map(t=>`<option>${t.replace(/&/g,"&amp;")}</option>`).join(""));
+
+document.getElementById("surveyForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const st=document.getElementById("status"),btn=document.getElementById("btn");
+  const d=Object.fromEntries(new FormData(e.target).entries());
+  if(ENDPOINT.startsWith("PASTE")){st.textContent="Not connected yet: add the Power Automate URL to ENDPOINT.";return;}
+  btn.disabled=true;st.textContent="Submitting…";
+  try{
+    // text/plain avoids a CORS preflight; the flow parses the JSON text.
+    await fetch(ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(d)});
+    e.target.reset();st.textContent="Thank you! Your response was submitted.";
+  }catch(err){st.textContent="Something went wrong. Check your connection and try again.";}
+  btn.disabled=false;
+});
 </script></body></html>
